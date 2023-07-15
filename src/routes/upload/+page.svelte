@@ -5,11 +5,16 @@
 <div class="box">
 	<div class="upload">
 		<div class="left">
-            <input type="text" name="title" id="">
-            <input type="file" name="video" id="">
+            <input placeholder="title here.." type="text" name="title" id="">
+            <h1>upload video file here</h1>
+            <input type="file" name="video" id="" >
+            <h1>upload thumbnail file here</h1>
+            <input type="file" name="thumbnail">
         </div>
-		<div class="right"> 
+		<div class="right">
+            <h1 style="text-align: center; font-family: 'Courier New', Courier, monospace;">preview</h1> 
             <div class="preview">
+              
                 <VideoCard cardType={'home-card'}/>
             </div>
         </div>
@@ -20,8 +25,17 @@
 </div>
 
 <style>
+    h1{
+        color: blue;
+        width: 100%;
+        font-size: 30px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
     input{
-        color: black;
+        background-color: black;
+        color: white;
+        width: 100%;
+        font-size: xx-large;
     }
 	.box {
 		margin: 0%;
@@ -34,6 +48,7 @@
 	}
 	.upload {
 		width: 100%;
+        height: 60vh;
 		display: flex;
 		justify-content: space-between;
 	}
@@ -50,4 +65,10 @@
 	.upload-btn:hover {
 		background-color: rgba(158, 154, 154, 0.614);
 	}
+    .right{
+        width: 30%;
+        border: 3px solid white;
+        display: grid;
+        place-items: center;
+    }
 </style>
