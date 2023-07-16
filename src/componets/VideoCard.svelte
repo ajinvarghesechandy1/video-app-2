@@ -4,7 +4,7 @@
 <div class={cardType}>
     
     <div class="thumb">
-        <img src="https://i.ytimg.com/an_webp/XRoSBWYMefY/mqdefault_6s.webp?du=3000&sqp=CKTBtKUG&rs=AOn4CLDOfhlA2K2DTqiMOvK_tkHyJWdZyA" >
+        <img alt="img" src="https://i.ytimg.com/an_webp/XRoSBWYMefY/mqdefault_6s.webp?du=3000&sqp=CKTBtKUG&rs=AOn4CLDOfhlA2K2DTqiMOvK_tkHyJWdZyA" >
     </div>
     <div class="title">
         <h1>tit..... fsdfsdfsf fsdfsdfs fsd f sdf sd f s df </h1>
@@ -17,7 +17,7 @@
     .recommended-card {
         width: 400px;
         display: flex;
-        justify-content: start;
+        justify-content: flex-start;
         height: fit-content;
 
     }
