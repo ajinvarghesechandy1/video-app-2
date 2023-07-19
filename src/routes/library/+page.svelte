@@ -1,5 +1,5 @@
 <script>
-	import History from "../../componets/History.svelte";
+	import HistoryUi from "../../componets/HistoryUi.svelte";
 
 </script>
-<History/>
+<HistoryUi/>

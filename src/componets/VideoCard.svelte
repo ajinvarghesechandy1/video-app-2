@@ -48,7 +48,7 @@
     .history-card {
         width: 400px;
         display: flex;
-        justify-content: start;
+        justify-content: flex-start;
         height: fit-content;
 
     }
@@ -82,7 +82,7 @@
      .search-card {
         width: 400px;
         display: flex;
-        justify-content: start;
+        justify-content: flex-start;
         height: fit-content;
 
     }

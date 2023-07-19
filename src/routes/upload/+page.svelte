@@ -2,6 +2,14 @@
 	import VideoCard from "../../componets/VideoCard.svelte";
 
 </script>
+
+
+<svelte:head>
+	<title>
+		upload
+	</title>
+</svelte:head>
+
 <div class="box">
 	<div class="upload">
 		<div class="left">
