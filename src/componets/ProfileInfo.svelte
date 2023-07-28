@@ -1,5 +1,13 @@
 <script>
 	import VideoCard from './VideoCard.svelte';
+  
+    import {auth} from '../lib/firbase';
+	import { onMount } from 'svelte';
+
+	
+	const user = auth.currentUser;
+    
+	
 </script>
 
 <div class="box">
@@ -7,7 +15,7 @@
 		<div class="profile-top">
 			<div class="profile-pic">
 				<img
-					src="https://www.himalmag.com/wp-content/uploads/2019/07/sample-profile-picture.png"
+					src="{user.phoneNumber}"
 					alt="profile"
 				/>
 			</div>
@@ -17,13 +25,14 @@
 		</div>
 		<div class="profile-bottom">
 			<div class="username">
-				<input type="text" value="username" />
+				<input type="text" value={user.email} />
 			</div>
 			<div class="bio">
-				<textarea name="bio" id="" cols="30" rows="5">bio </textarea>
+				<textarea name="bio" id="" cols="30" rows="5">{user?.uid} </textarea>
 			</div>
 			<div class="update">
-				<button class="update-btn">update</button>
+				<button on:click={()=>auth.signOut} class="update-btn">update</button>
+				<button on:click={()=>user?.delete}>delete</button>
 			</div>
 		</div>
 	</div>

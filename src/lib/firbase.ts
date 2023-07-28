@@ -1,5 +1,5 @@
 import {initializeApp  } from 'firebase/app';
-import {signInWithEmailAndPassword , onAuthStateChanged} from 'firebase/auth'
+import {createUserWithEmailAndPassword , onAuthStateChanged , getAuth , signInAnonymously } from 'firebase/auth'
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: "AIzaSyAhcj0QDPbem1XpohFoeJOUaR_zsC_nykg",
@@ -12,5 +12,5 @@ const firebaseConfig = {
     measurementId: "G-JVM3R66GG3"
   };
 const app = initializeApp(firebaseConfig)
-
-export {signInWithEmailAndPassword , onAuthStateChanged}
+const auth  = getAuth(app)
+export {createUserWithEmailAndPassword , onAuthStateChanged , auth , signInAnonymously}

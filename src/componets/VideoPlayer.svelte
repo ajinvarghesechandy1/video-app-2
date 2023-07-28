@@ -1,6 +1,6 @@
-<script lang="ts">
+<script>
 
-   export let video:object;
+   export let video;
 </script>
 <div class="video-player">
     <video

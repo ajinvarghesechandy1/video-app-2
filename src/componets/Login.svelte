@@ -1,14 +1,12 @@
-<script lang="ts">
-	import {auth , onAuthStateChanged , createUserWithEmailAndPassword} from '../lib/firbase'
-	let email:string;
-	let password:string & number
+<script>
+	import {auth , onAuthStateChanged , createUserWithEmailAndPassword , signInAnonymously} from '../lib/firbase'
+	let email
+	let password
   const handleLogin = ()=>{
 	
 
 	
-		createUserWithEmailAndPassword(auth , email , password).then((userCredential)=>{
-	   console.log(userCredential.user.email)
-		})
+ 
 	
   }
 </script>
@@ -24,7 +22,9 @@
 			Password <br />
 			<input type="password" bind:value={password} placeholder="***********" required/>
 		</label>
-		<input on:click={handleLogin} type="submit" value="Login" class="login-btn" />
+		<input  type="submit" value="Login" class="login-btn" />
+		<button on:click={()=> signInAnonymously(auth)} >anoymus</button>
+
 	</form>
 </div>
 

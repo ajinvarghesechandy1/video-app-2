@@ -1,5 +1,5 @@
-<script lang="ts">
-    export let cardType:string; 
+<script >
+    export let cardType; 
 </script>
 <div class={cardType}>
     
