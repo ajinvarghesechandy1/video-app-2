@@ -1,15 +1,30 @@
+<script lang="ts">
+	import {auth , onAuthStateChanged , createUserWithEmailAndPassword} from '../lib/firbase'
+	let email:string;
+	let password:string & number
+  const handleLogin = ()=>{
+	
+
+	
+		createUserWithEmailAndPassword(auth , email , password).then((userCredential)=>{
+	   console.log(userCredential.user.email)
+		})
+	
+  }
+</script>
+
 <div class="signup-box">
-	<form action="/" method="post">
+	<form  >
 		<label for="email">
 			Email <br />
-			<input type="email" placeholder="example@gmail.com" />
+			<input type="email" bind:value={email} placeholder="example@gmail.com"  required/>
 		</label>
 		<br />
 		<label for="email">
 			Password <br />
-			<input type="password" placeholder="***********" />
+			<input type="password" bind:value={password} placeholder="***********" required/>
 		</label>
-		<input type="submit" value="Login" class="login-btn" />
+		<input on:click={handleLogin} type="submit" value="Login" class="login-btn" />
 	</form>
 </div>
 
